@@ -118,6 +118,16 @@
 		</footer>
 		<iframe style="display: none" id="uv-frame"></iframe>
 		<script src="register-sw.js"></script>
+<div style="margin: 20px 0; text-align: center;">
+  <button onclick="launchSite('https://duckduckgo.com')" style="padding: 10px 20px; margin-right: 10px; cursor: pointer; background: #de5833; color: white; border: none; border-radius: 5px;">DuckDuckGo</button>
+  <button onclick="launchSite('https://www.youtube.com')" style="padding: 10px 20px; cursor: pointer; background: #ff0000; color: white; border: none; border-radius: 5px;">YouTube</button>
+</div>
+
+<script>
+  function launchSite(targetUrl) {
+    window.location.href = __uv$config.prefix + __uv$config.encodeUrl(targetUrl);
+  }
+</script>
 		<script src="search.js"></script>
 		<script src="index.js"></script>
 	</body>
